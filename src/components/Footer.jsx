@@ -2,8 +2,9 @@ import { Linkedin, Twitter, Instagram, Facebook, Youtube } from 'lucide-react'
 
 function Footer() {
   return (
-    <footer className="bg-black text-white" id="contact">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-4 gap-8">
+    <footer className="relative bg-black text-white" id="contact">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(600px_300px_at_50%_-20%,#4169E11a,transparent)]" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-4 gap-8">
         <div>
           <h4 className="text-sm font-semibold text-white/80 mb-3">SERVICES</h4>
           <ul className="space-y-2 text-white/70 text-sm">
@@ -33,14 +34,14 @@ function Footer() {
           <p className="text-white/70 text-sm mb-4">contact@epctext.com<br/>San Francisco, CA</p>
           <div className="flex items-center gap-3">
             {[Linkedin, Twitter, Instagram, Facebook, Youtube].map((Icon, idx) => (
-              <a key={idx} href="#" className="p-2 rounded-md bg-white/10 hover:bg-white/20">
+              <a key={idx} href="#" className="p-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors">
                 <Icon size={18} />
               </a>
             ))}
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-xs text-white/60 flex items-center justify-between">
           <span>© {new Date().getFullYear()} epctext. All rights reserved.</span>
           <a href="#" className="hover:text-white">Privacy</a>
